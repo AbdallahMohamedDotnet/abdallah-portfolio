@@ -1,0 +1,39 @@
+{
+  "name": "ENG.abdallah",
+  "title": "Back-End Developer",
+  "description": "Building digital experiences with modern technologies. Focused on creating elegant solutions to complex problems.",
+  "email": "abdoooomohamed88@gmail.com",
+  "profileImage": "/uploads/profile-1755503684529.jpg",
+  "socialLinks": {
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "twitter": "https://twitter.com"
+  },
+  "navigation": [
+    {
+      "name": "About",
+      "href": "#about"
+    },
+    {
+      "name": "Projects",
+      "href": "#projects"
+    },
+    {
+      "name": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "footer": {
+    "copyright": "© 2024 ENG.abdallah. All rights reserved.",
+    "links": [
+      {
+        "name": "Terms of Service",
+        "href": "#"
+      },
+      {
+        "name": "Privacy",
+        "href": "#"
+      }
+    ]
+  }
+}

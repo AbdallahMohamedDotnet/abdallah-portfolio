@@ -1,0 +1,603 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Added smooth scrolling behavior */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+  }
+}
+
+/* Enhanced animated background with more dynamic effects */
+@layer components {
+  .live-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, hsl(var(--background)), hsl(var(--muted)));
+    overflow: hidden;
+  }
+
+  /* Changed all background animation colors to white with varying opacity */
+  /* Multiple animated layers for ultra-active background */
+  .live-background::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.6) 0%, transparent 70%),
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.5) 0%, transparent 70%),
+      radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.5) 0%, transparent 70%),
+      radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0.4) 0%, transparent 60%),
+      radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.3) 0%, transparent 50%);
+    animation: float-complex 20s ease-in-out infinite;
+  }
+
+  .live-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.2) 0%, transparent 40%),
+      radial-gradient(circle at 10% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 40%);
+    animation: drift-wave 25s linear infinite reverse;
+  }
+
+  /* Added third layer for maximum activity */
+  .live-background .floating-orbs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.15) 0%, transparent 30%),
+      radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.15) 0%, transparent 30%),
+      radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 30%),
+      radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 30%);
+    animation: pulse-orbs 15s ease-in-out infinite alternate;
+  }
+
+  /* Updated dark mode background animations to use white with lower opacity */
+  .dark .live-background::before {
+    background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 70%),
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.18) 0%, transparent 70%),
+      radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.18) 0%, transparent 70%),
+      radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0.15) 0%, transparent 60%),
+      radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
+  }
+
+  .dark .live-background::after {
+    background-image: radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 10% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 40%);
+  }
+
+  .dark .live-background .floating-orbs {
+    background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.08) 0%, transparent 30%),
+      radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.08) 0%, transparent 30%),
+      radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 30%),
+      radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 30%);
+  }
+
+  .animated-developer-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .animated-developer-image::before {
+    content: "👨‍💻";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    animation: bounce-rotate 4s ease-in-out infinite;
+  }
+
+  .animated-developer-image::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: rotate-shine 3s linear infinite;
+  }
+
+  .dark .animated-developer-image {
+    background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+    box-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
+  }
+
+  .dark .animated-developer-image:hover {
+    box-shadow: 0 0 40px rgba(79, 172, 254, 0.6);
+  }
+
+  .sound-button {
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sound-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .sound-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .sound-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .sound-button:hover::before {
+    left: 100%;
+  }
+
+  .dark .sound-button:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Removed all custom cursor styles and animations */
+}
+
+/* Enhanced animations with more dynamic movement patterns */
+@keyframes float-complex {
+  0% {
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1);
+  }
+  15% {
+    transform: translateX(-40px) translateY(-30px) rotate(54deg) scale(1.15);
+  }
+  30% {
+    transform: translateX(30px) translateY(-50px) rotate(108deg) scale(0.85);
+  }
+  45% {
+    transform: translateX(-20px) translateY(20px) rotate(162deg) scale(1.1);
+  }
+  60% {
+    transform: translateX(50px) translateY(-15px) rotate(216deg) scale(0.9);
+  }
+  75% {
+    transform: translateX(-30px) translateY(40px) rotate(270deg) scale(1.05);
+  }
+  90% {
+    transform: translateX(20px) translateY(-25px) rotate(324deg) scale(0.95);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes drift-wave {
+  0% {
+    transform: translateX(0%) translateY(0%) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translateX(-25%) translateY(-20%) rotate(72deg) scale(1.1);
+  }
+  40% {
+    transform: translateX(20%) translateY(-30%) rotate(144deg) scale(0.9);
+  }
+  60% {
+    transform: translateX(-15%) translateY(25%) rotate(216deg) scale(1.05);
+  }
+  80% {
+    transform: translateX(30%) translateY(-10%) rotate(288deg) scale(0.95);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes pulse-orbs {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  25% {
+    transform: scale(1.2) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(0.8) rotate(180deg);
+    opacity: 0.4;
+  }
+  75% {
+    transform: scale(1.1) rotate(270deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(102, 126, 234, 0.8);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce-rotate {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(-5deg) scale(1.1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.05);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(5deg) scale(1.1);
+  }
+}
+
+@keyframes rotate-shine {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* New animations for enhanced components */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}
+
+/* Enhanced animations for profile image */
+@keyframes profile-entrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-180deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1) rotate(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes floating-glow {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  33% {
+    transform: scale(1.1) rotate(120deg);
+    opacity: 0.8;
+  }
+  66% {
+    transform: scale(0.9) rotate(240deg);
+    opacity: 0.7;
+  }
+}
+
+/* Welcome Animation Styles - Clean & Minimal */
+.welcome-text-container {
+  overflow: hidden;
+}
+
+/* Simple, elegant text animation */
+.welcome-text {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* Smooth entrance and exit animations */
+@keyframes welcome-slide-up-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes welcome-slide-up-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+}
+
+/* Staggered exit animation for multiple elements */
+@keyframes welcome-fade-out-stagger {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-15px) scale(0.98);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+}
+
+/* Line expansion animation */
+@keyframes line-expand {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 8rem;
+    opacity: 0.4;
+  }
+}
+
+/* Minimal loading dots */
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Utility classes */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 3;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbit 10s linear infinite;
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 4s ease-in-out infinite;
+}

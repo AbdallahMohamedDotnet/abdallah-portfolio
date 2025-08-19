@@ -1,0 +1,48 @@
+{
+  "categories": [
+    {
+      "category": "Frontend",
+      "technologies": [
+        { "name": "React", "icon": "⚛️" },
+        { "name": "Next.js", "icon": "▲" },
+        { "name": "TypeScript", "icon": "🔷" },
+        { "name": "TailwindCSS", "icon": "🎨" },
+        { "name": "Redux", "icon": "🔄" },
+        { "name": "GraphQL", "icon": "📊" }
+      ]
+    },
+    {
+      "category": "Backend",
+      "technologies": [
+        { "name": "Node.js", "icon": "🟢" },
+        { "name": "Express", "icon": "🚀" },
+        { "name": "Python", "icon": "🐍" },
+        { "name": "Django", "icon": "🎸" },
+        { "name": "PostgreSQL", "icon": "🐘" },
+        { "name": "MongoDB", "icon": "🍃" }
+      ]
+    },
+    {
+      "category": "DevOps",
+      "technologies": [
+        { "name": "Docker", "icon": "🐳" },
+        { "name": "AWS", "icon": "☁️" },
+        { "name": "CI/CD", "icon": "🔄" },
+        { "name": "Git", "icon": "📝" },
+        { "name": "Linux", "icon": "🐧" },
+        { "name": "Nginx", "icon": "🌐" }
+      ]
+    },
+    {
+      "category": "Tools",
+      "technologies": [
+        { "name": "VS Code", "icon": "💻" },
+        { "name": "Postman", "icon": "📮" },
+        { "name": "Figma", "icon": "🎨" },
+        { "name": "Jest", "icon": "🧪" },
+        { "name": "GitHub", "icon": "🐙" },
+        { "name": "Vercel", "icon": "▲" }
+      ]
+    }
+  ]
+}

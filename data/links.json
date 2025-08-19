@@ -1,0 +1,31 @@
+{
+  "links": [
+    {
+      "id": 1,
+      "title": "Portfolio Website",
+      "url": "https://myportfolio.dev",
+      "description": "My personal portfolio showcasing projects and skills",
+      "category": "Personal",
+      "isActive": true,
+      "createdAt": "2024-01-15T10:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "GitHub Profile",
+      "url": "https://github.com/username",
+      "description": "My open source projects and contributions",
+      "category": "Social",
+      "isActive": true,
+      "createdAt": "2024-01-15T10:35:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Blog",
+      "url": "https://myblog.dev",
+      "description": "Technical articles and tutorials",
+      "category": "Content",
+      "isActive": true,
+      "createdAt": "2024-01-15T10:40:00.000Z"
+    }
+  ]
+}

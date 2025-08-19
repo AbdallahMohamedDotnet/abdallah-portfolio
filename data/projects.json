@@ -1,0 +1,145 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-commerce Platform",
+      "description": "A full-stack e-commerce platform built with Next.js, Prisma, and Stripe integration.",
+      "shortDescription": "Modern e-commerce solution with payment integration",
+      "image": "/placeholder.svg?height=400&width=600",
+      "images": [
+        "/placeholder.svg?height=400&width=600",
+        "/project-management-dashboard.png",
+        "/project-management-team.png"
+      ],
+      "link": "https://github.com",
+      "liveDemo": "https://ecommerce-demo.vercel.app",
+      "tags": ["Next.js", "Prisma", "Stripe", "TypeScript", "Tailwind CSS"],
+      "category": "Full Stack",
+      "duration": "3 months",
+      "status": "Completed",
+      "technologies": {
+        "frontend": ["Next.js 14", "React 18", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        "backend": ["Node.js", "Prisma ORM", "PostgreSQL", "NextAuth.js"],
+        "payment": ["Stripe API"],
+        "deployment": ["Vercel", "Railway"]
+      },
+      "features": [
+        "User authentication and authorization",
+        "Product catalog with search and filtering",
+        "Shopping cart and wishlist functionality",
+        "Secure payment processing with Stripe",
+        "Order management and tracking",
+        "Admin dashboard for inventory management",
+        "Responsive design for all devices",
+        "Real-time inventory updates"
+      ],
+      "challenges": [
+        "Implementing secure payment processing",
+        "Optimizing database queries for large product catalogs",
+        "Creating responsive design across all device sizes",
+        "Managing complex state for shopping cart functionality"
+      ],
+      "learnings": [
+        "Advanced Next.js features like SSR and ISR",
+        "Payment gateway integration best practices",
+        "Database optimization techniques",
+        "Modern authentication patterns"
+      ],
+      "overview": "This e-commerce platform represents a comprehensive solution for online retail businesses. Built with modern web technologies, it provides a seamless shopping experience for customers while offering powerful management tools for administrators. The platform handles everything from product browsing to payment processing, with a focus on performance, security, and user experience."
+    },
+    {
+      "id": 2,
+      "title": "Task Management App",
+      "description": "A real-time task management application with team collaboration features.",
+      "shortDescription": "Collaborative project management with real-time updates",
+      "image": "/placeholder.svg?height=400&width=600",
+      "images": [
+        "/placeholder.svg?height=400&width=600",
+        "/project-management-dashboard.png",
+        "/project-management-team.png"
+      ],
+      "link": "https://github.com",
+      "liveDemo": "https://taskmanager-demo.vercel.app",
+      "tags": ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
+      "category": "Full Stack",
+      "duration": "2 months",
+      "status": "Completed",
+      "technologies": {
+        "frontend": ["React 18", "TypeScript", "Material-UI", "React Query", "Socket.io Client"],
+        "backend": ["Node.js", "Express.js", "Socket.io", "MongoDB", "Mongoose"],
+        "authentication": ["JWT", "bcrypt"],
+        "deployment": ["Heroku", "MongoDB Atlas"]
+      },
+      "features": [
+        "Real-time task updates and notifications",
+        "Team collaboration and project sharing",
+        "Drag-and-drop task management",
+        "File attachments and comments",
+        "Time tracking and reporting",
+        "Project progress visualization",
+        "User roles and permissions",
+        "Mobile-responsive interface"
+      ],
+      "challenges": [
+        "Implementing real-time synchronization across multiple users",
+        "Managing complex state with real-time updates",
+        "Optimizing performance for large datasets",
+        "Creating intuitive drag-and-drop interfaces"
+      ],
+      "learnings": [
+        "WebSocket implementation for real-time features",
+        "Advanced React patterns for complex state management",
+        "Database design for collaborative applications",
+        "Performance optimization techniques"
+      ],
+      "overview": "A comprehensive task management solution designed for modern teams. This application combines the power of real-time collaboration with intuitive project management features. Teams can organize their work, track progress, and communicate effectively, all within a single platform that updates instantly across all connected devices."
+    },
+    {
+      "id": 3,
+      "title": "AI Chat Interface",
+      "description": "An AI-powered chat interface with natural language processing capabilities.",
+      "shortDescription": "Intelligent chatbot with advanced NLP features",
+      "image": "/placeholder.svg?height=400&width=600",
+      "images": [
+        "/placeholder.svg?height=400&width=600",
+        "/project-management-dashboard.png",
+        "/project-management-team.png"
+      ],
+      "link": "https://github.com",
+      "liveDemo": "https://aichat-demo.vercel.app",
+      "tags": ["OpenAI", "Next.js", "TailwindCSS", "Python", "FastAPI"],
+      "category": "AI/ML",
+      "duration": "4 months",
+      "status": "In Progress",
+      "technologies": {
+        "frontend": ["Next.js 14", "React 18", "TypeScript", "Tailwind CSS", "Headless UI"],
+        "backend": ["Python", "FastAPI", "OpenAI API", "LangChain", "Pinecone"],
+        "ai": ["GPT-4", "Embeddings", "Vector Database", "RAG"],
+        "deployment": ["Vercel", "Railway", "Docker"]
+      },
+      "features": [
+        "Natural language conversation interface",
+        "Context-aware responses",
+        "Document upload and analysis",
+        "Multi-language support",
+        "Conversation history and search",
+        "Custom AI model fine-tuning",
+        "Real-time typing indicators",
+        "Voice-to-text integration"
+      ],
+      "challenges": [
+        "Optimizing AI response times",
+        "Managing conversation context effectively",
+        "Implementing RAG for document queries",
+        "Handling large file uploads and processing"
+      ],
+      "learnings": [
+        "Advanced prompt engineering techniques",
+        "Vector database implementation",
+        "AI model integration best practices",
+        "Streaming responses for better UX"
+      ],
+      "overview": "An advanced AI chat interface that leverages cutting-edge natural language processing to provide intelligent, context-aware conversations. This application demonstrates the integration of modern AI technologies with web development, creating a seamless user experience that can understand, analyze, and respond to complex queries with remarkable accuracy."
+    }
+  ]
+}
